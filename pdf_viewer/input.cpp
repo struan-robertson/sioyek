@@ -6967,6 +6967,8 @@ InputParseTreeNode parse_token(std::wstring token) {
                 {L"pagedown", Qt::Key::Key_End},
                 {L"tab", Qt::Key::Key_Tab},
                 {L"return", Qt::Key::Key_Return},
+		{L"less", Qt::Key::Key_Less},
+		{L"greater", Qt::Key::Key_Greater},
             };
             std::map<std::wstring, Qt::Key> keymap;
 
@@ -7466,6 +7468,8 @@ std::string InputHandler::get_key_name_from_key_code(int key_code) const {
         {Qt::Key::Key_End, "end"},
         {Qt::Key::Key_Tab, "tab"},
         {Qt::Key::Key_Backtab, "tab"},
+	{Qt::Key::Key_Less, "less"},
+	{Qt::Key::Key_Greater, "greater"},
     };
 
     //if (((key_code <= 'z') && (key_code >= 'a')) || ((key_code <= 'Z') && (key_code >= 'A'))) {
